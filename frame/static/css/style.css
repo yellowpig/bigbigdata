@@ -585,3 +585,8 @@ html body .layui-nav .layui-nav-bar {
         display: none;
     }
 }
+/* SQL查询页 */
+.CodeMirror{
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
