@@ -28,7 +28,9 @@
         <button class="layui-btn mgl-20">查询</button>
     </span>
 </div>
-
+<div>
+    <strong>ETL转换表结构</strong>
+</div>
 <!-- 表格 -->
 <div id="dateTable"></div>
 
@@ -65,7 +67,7 @@
             , method: 'get'
             , page: true
             , limits: [30, 60, 90, 150, 300]
-            , limit: 30 //默认采用30
+            , limit: 15 //默认采用15
             , loading: false
             , done: function (res, curr, count) {
                 //如果是异步请求数据方式，res即为你接口返回的信息。
