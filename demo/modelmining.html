@@ -57,12 +57,12 @@
                 , {field: 'parameter', title: '参数', width: 200}
                 , {field: 'create_time', title: '创建时间', width: 150}
                 , {field: 'style', title: '类型', width: 100}
-                , {field: 'descripe', title: '描述', width: 200}
+                , {field: 'describe', title: '描述', width: 350}
                 , {fixed: 'right', title: '操作', width: 200, align: 'center', toolbar: '#barOption'} //这里的toolbar值是模板元素的选择器
             ]]
             , id: 'dataCheck'
             //, url: './../json/data_table.json'
-            ,data:[{"name":"test3","id":3,"parameter":"tem,hum","create_time":20180723,"style":"通用模型","descripe":"预测温度"},{"name":"test4","id":4,"parameter":"tem,hum","create_time":20180723,"style":"自定义模型","descripe":"预测湿度"}]
+            ,data:[{"name":"test3","id":3,"parameter":"tem,hum","create_time":20180723,"style":"通用模型","describe":"数据挖掘"},{"name":"test4","id":4,"parameter":"tem,hum","create_time":20180723,"style":"自定义模型","describe":"数据挖掘"}]
             , method: 'get'
             , page: true
             , limits: [30, 60, 90, 150, 300]
