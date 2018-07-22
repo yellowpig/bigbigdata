@@ -12,7 +12,7 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
-    <div class="my-btn-box" style="padding: 10px;border-bottom: 1px solid #DCDCDC">
+    <div class="my-btn-box" style="padding: 5px;border-bottom: 1px solid #DCDCDC">
         按<select style="margin:0 10px">
         <option value="bystyle">设备类型</option>
         <option value="bydevice">单个设备</option>
@@ -24,7 +24,31 @@
         <button class="layui-btn layui-btn-xs" style="height: 25px;line-height: 25px;">确定</button>
     </div>
 
-    <div id="mycanvas" style="margin:auto;height: 500px"></div>
+    <div class="my-btn-box" style="padding: 5px;border-bottom: 1px solid #DCDCDC">
+        <div style="float: left">
+            选择日期：
+            <div class="layui-inline">
+                <input type="text" class="layui-input" id="test1">
+            </div>
+            <button class="layui-btn" style="margin-left: 10px">查看</button>
+        </div>
+        <div style="margin-left:550px;font-weight: bold;font-size: 25px;">设备分析数据</div>
+    </div>
+    <script type="text/javascript" src="../frame/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script>
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#test1' //指定元素
+                ,range:true
+            });
+        });
+    </script>
+
+    <div id="mycanvas" style="margin:auto;height: 450px;width: 70%"></div>
 </body>
 <script type="text/javascript" src="../frame/echarts/echarts.min.js"></script>
 <script type="text/javascript" src="../js/dataanaylsis.js"></script>

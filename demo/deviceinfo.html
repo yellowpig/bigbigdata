@@ -13,11 +13,11 @@
 </head>
 <body class="body">
     <div class="my-btn-box" style="padding: 10px;border-bottom: 1px solid #DCDCDC">
-        请选择统计时间
+        请选择统计时间：
         <div class="layui-inline">
             <input type="text" class="layui-input" id="test1">
         </div>
-        <button class="layui-btn" style="height: 25px;line-height: 25px;">确定</button>
+        <button class="layui-btn" style="margin-left: 10px">确定</button>
     </div>
     <script type="text/javascript" src="../frame/layui/layui.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
@@ -28,6 +28,7 @@
             //执行一个laydate实例
             laydate.render({
                 elem: '#test1' //指定元素
+                ,range:true
             });
         });
     </script>
