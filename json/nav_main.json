@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "text": "数据展示",
+      "icon": "&#xe620;",
+      "href": "demo/deviceinfo.html"
+    },{
+      "text": "ETL",
+      "icon": "&#xe628;",
+      "href": "",
+      "subset": [
+        {
+          "text": "已有数据ETL",
+          "icon": "&#xe621;",
+          "href": "demo/ETLexisted.html"
+        },{
+          "text": "上传数据ETL",
+          "icon": "&#xe621;",
+          "href": "demo/ETLupdate.html"
+        }
+      ]
+    },{
+      "text": "数据分析",
+      "icon": "&#xe638;",
+      "href": "demo/dataanaylsis.html"
+    },{
+      "text": "数据预测",
+      "icon": "&#xe628;",
+      "href": "",
+      "subset": [
+        {
+          "text": "数据预测",
+          "icon": "&#xe621;",
+          "href": "demo/dataforecast.html"
+        },{
+          "text": "模型管理",
+          "icon": "&#xe621;",
+          "href": "demo/modelforecast.html"
+        }
+      ]
+    },{
+      "text": "数据挖掘",
+      "icon": "&#xe628;",
+      "href": "",
+      "subset": [
+        {
+          "text": "数据挖掘",
+          "icon": "&#xe621;",
+          "href": "demo/datamining.html"
+        },{
+          "text": "模型库管理",
+          "icon": "&#xe621;",
+          "href": "demo/modelmining.html"
+        }
+      ]
+    }
+  ]
+}
