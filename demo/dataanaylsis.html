@@ -13,11 +13,12 @@
 </head>
 <body class="body">
     <div class="my-btn-box" style="padding: 5px;border-bottom: 1px solid #DCDCDC">
-        按<select style="margin:0 10px">
+        按<select name="type" lay-verify="">
         <option value="bystyle">设备类型</option>
         <option value="bydevice">单个设备</option>
     </select>分析,查看
-        <select style="margin:0 10px">
+        <select name="device" lay-verify="">
+            <option value="">--请选择设备类型--</option>
             <option value="humidity">humidity</option>
             <option value="light">light</option>
         </select>设备
@@ -37,8 +38,9 @@
     <script type="text/javascript" src="../frame/layui/layui.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
     <script>
-        layui.use('laydate', function(){
+        layui.use(['laydate','form'], function(){
             var laydate = layui.laydate;
+            var form = layui.form;
 
             //执行一个laydate实例
             laydate.render({

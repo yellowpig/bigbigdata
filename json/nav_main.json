@@ -19,11 +19,24 @@
           "href": "demo/ETLupdate.html"
         }
       ]
-    },{
+    },
+    {
       "text": "数据分析",
-      "icon": "&#xe638;",
-      "href": "demo/dataanaylsis.html"
-    },{
+      "icon": "&#xe628;",
+      "href": "",
+      "subset": [
+        {
+          "text": "常规分析",
+          "icon": "&#xe621;",
+          "href": "demo/dataanaylsis.html"
+        },{
+          "text": "SQL",
+          "icon": "&#xe621;",
+          "href": "demo/dataSQL.html"
+        }
+      ]
+    },
+    {
       "text": "数据预测",
       "icon": "&#xe628;",
       "href": "",
