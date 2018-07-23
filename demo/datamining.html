@@ -10,13 +10,14 @@
     <!--<link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">-->
     <link rel="stylesheet" href="../frame/static/css/style.css">
     <link rel="icon" href="../frame/static/image/code.png">
+    <script type="text/javascript" src="../js/datamining.js"></script>
 </head>
 <body class="body">
 <!-- 工具集 -->
 <div class="my-btn-box">
     <span class="fl">
         <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
-        <a class="layui-btn btn-add btn-default" id="btn-add">添加</a>
+        <a class="layui-btn btn-add btn-default" id="btn-add" onclick="addmodel()">添加</a>
         <a class="layui-btn btn-add btn-default" id="btn-refresh"><i class="layui-icon">&#x1002;</i></a>
     </span>
     <span class="fr">
@@ -140,6 +141,7 @@
         //日历
         laydate.render({
             elem: '#run_timeout' //指定元素
+            ,range:true
         });
     });
 </script>
