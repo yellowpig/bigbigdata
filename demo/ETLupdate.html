@@ -11,51 +11,184 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">上传文档</li>
+        <li>上传数据</li>
+    </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show">
+            <blockquote class="layui-elem-quote layui-quote-nm">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal" id="testList"><i class="layui-icon"></i>选择文件</button>
+                    <button type="button" class="layui-btn" id="testListAction">开始上传</button>
+                    <div class="layui-upload-list">
+                        <table class="layui-table">
+                            <thead>
+                            <tr><th>文件名</th>
+                                <th>大小</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr></thead>
+                            <tbody id="demoList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </blockquote>
 
-<form class="layui-form layui-form-pane" action="">
-    <div class="layui-form-item">
-        <label class="layui-form-label">上传文档</label>
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>数据筛选</legend>
+            </fieldset>
+            <div id="show1">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联动筛选</label>
+                        <div class="layui-input-inline">
+                            <select name="quiz1">
+                                <option value="">请选择设备ID</option>
+                                <option value="浙江" selected="">1</option>
+                                <option value="你的工号">2</option>
+                                <option value="你最喜欢的老师">7</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz2">
+                                <option value="">请选择设备组</option>
+                                <option value="杭州">1</option>
+                                <option value="宁波" disabled="">2</option>
+                                <option value="温州">3</option>
+                                <option value="温州">4</option>
+                                <option value="温州">5</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz3">
+                                <option value="">请选择具体字段</option>
+                                <option value="西湖区">1</option>
+                                <option value="余杭区">2</option>
+                                <option value="拱墅区">3</option>
+                            </select>
+                        </div>
+                        <div class="layui-btn-group">
 
-        <div class="layui-input-block">
-            <input type="file" name="title" autocomplete="off" placeholder="请选择所需文档" lay-verify="required"
-                   class="layui-input">
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon" ></i></button>
+                        </div>
+                    </div>
+                </form>
+                <fieldset class="layui-elem-field layui-field-title"></fieldset>
+            </div>
+            <div id="show2" style="display: none">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">联动筛选</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz1">
+                            <option value="">请选择设备ID</option>
+                            <option value="浙江" selected="">1</option>
+                            <option value="你的工号">2</option>
+                            <option value="你最喜欢的老师">7</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select name="quiz2">
+                            <option value="">请选择设备组</option>
+                            <option value="杭州">1</option>
+                            <option value="宁波" disabled="">2</option>
+                            <option value="温州">3</option>
+                            <option value="温州">4</option>
+                            <option value="温州">5</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select name="quiz3">
+                            <option value="">请选择具体字段</option>
+                            <option value="西湖区">1</option>
+                            <option value="余杭区">2</option>
+                            <option value="拱墅区">3</option>
+                        </select>
+                    </div>
+                    <div class="layui-btn-group">
+                        <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                        <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                        <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon" ></i></button>
+                    </div>
+                </div>
+            </form>
+            <fieldset class="layui-elem-field layui-field-title"></fieldset>
+        </div>
+            <div id="show3" style="display: none">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联动筛选</label>
+                        <div class="layui-input-inline">
+                            <select name="quiz1">
+                                <option value="">请选择设备ID</option>
+                                <option value="浙江" selected="">1</option>
+                                <option value="你的工号">2</option>
+                                <option value="你最喜欢的老师">7</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz2">
+                                <option value="">请选择设备组</option>
+                                <option value="杭州">1</option>
+                                <option value="宁波" disabled="">2</option>
+                                <option value="温州">3</option>
+                                <option value="温州">4</option>
+                                <option value="温州">5</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz3">
+                                <option value="">请选择具体字段</option>
+                                <option value="西湖区">1</option>
+                                <option value="余杭区">2</option>
+                                <option value="拱墅区">3</option>
+                            </select>
+                        </div>
+                        <div class="layui-btn-group">
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon"></i></button>
+                            <button class="layui-btn layui-btn-primary layui-btn-sm"><i class="layui-icon" ></i></button>
+                        </div>
+                    </div>
+                </form>
+                <fieldset class="layui-elem-field layui-field-title"></fieldset>
+            </div>
+            <strong  style="color: #00C0F7;font-size: 18px;cursor: pointer" ><i class="layui-icon" style="font-size: 22px" onclick="show()"></i>   筛选条件</strong>
+            <fieldset class="layui-elem-field layui-field-title"></fieldset>
+
+
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="sub">提交</button>
+            </div>
+        </div>
+
+
+        <div class="layui-tab-item">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">tenantID    device</label>
+                    <div class="layui-input-block">
+                        <textarea  placeholder="请输入内容。。。。" class="layui-textarea"></textarea>
+                    </div>
+
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-submit="" lay-filter="sub">提交</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">文档名称</label>
-
-        <div class="layui-input-inline">
-            <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off"
-                   class="layui-input">
-        </div>
-    </div>
+</div>
 
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">文档格式</label>
 
-        <div class="layui-input-block">
-            <select name="interest" lay-filter="aihao">
-                <option value="" selected=""></option>
-                <option value="0">doc</option>
-                <option value="1">docx</option>
-                <option value="2">pdf</option>
-                <option value="3">txt</option>
-            </select>
-        </div>
-    </div>
-    <div class="layui-form-item layui-form-text">
-        <div class="layui-input-block">
-            <textarea id="LAY_demo_editor" placeholder="请输入内容。。。。" class="layui-textarea"></textarea>
-        </div>
-        <label class="layui-form-label">请输入内容</label>
-    </div>
-    <div class="layui-form-item">
-        <button class="layui-btn" lay-submit="" lay-filter="sub">提交</button>
-    </div>
-</form>
 
 <script src="../frame/layui/layui.js" charset="utf-8"></script>
+<script src="../js/jquery-3.3.1.js"></script>
 <script type="text/javascript">
     layui.use(['form', 'layedit', 'laydate', 'element'], function () {
         var form = layui.form
@@ -92,6 +225,89 @@
 
 
     });
+
+    //指定允许上传的文件类型
+    layui.use('upload', function() {
+        var $ = layui.jquery
+            , upload = layui.upload;
+        upload.render({
+            elem: '#test3'
+            , url: '/upload/'
+            , accept: 'file' //普通文件
+            , done: function (res) {
+                console.log(res)
+            }
+        })
+
+
+        //多文件列表示例
+        var demoListView = $('#demoList')
+            ,uploadListIns = upload.render({
+            elem: '#testList'
+            ,url: '/upload/'
+            ,accept: 'file'
+            ,multiple: true
+            ,auto: false
+            ,bindAction: '#testListAction'
+            ,choose: function(obj){
+                var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+                //读取本地文件
+                obj.preview(function(index, file, result){
+                    var tr = $(['<tr id="upload-'+ index +'">'
+                        ,'<td>'+ file.name +'</td>'
+                        ,'<td>'+ (file.size/1014).toFixed(1) +'kb</td>'
+                        ,'<td>等待上传</td>'
+                        ,'<td>'
+                        ,'<button class="layui-btn layui-btn-xs demo-reload layui-hide">重传</button>'
+                        ,'<button class="layui-btn layui-btn-xs layui-btn-danger demo-delete">删除</button>'
+                        ,'</td>'
+                        ,'</tr>'].join(''));
+
+                    //单个重传
+                    tr.find('.demo-reload').on('click', function(){
+                        obj.upload(index, file);
+                    });
+
+                    //删除
+                    tr.find('.demo-delete').on('click', function(){
+                        delete files[index]; //删除对应的文件
+                        tr.remove();
+                        uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
+                    });
+
+                    demoListView.append(tr);
+                });
+            }
+            ,done: function(res, index, upload){
+                if(res.code == 0){ //上传成功
+                    var tr = demoListView.find('tr#upload-'+ index)
+                        ,tds = tr.children();
+                    tds.eq(2).html('<span style="color: #5FB878;">上传成功</span>');
+                    tds.eq(3).html(''); //清空操作
+                    return delete this.files[index]; //删除文件队列已经上传成功的文件
+                }
+                this.error(index, upload);
+            }
+            ,error: function(index, upload){
+                var tr = demoListView.find('tr#upload-'+ index)
+                    ,tds = tr.children();
+                tds.eq(2).html('<span style="color: #FF5722;">上传失败</span>');
+                tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
+            }
+        });
+
+
+
+
+
+    });
+
+
+    function show() {
+        jQuery('#show2').css({'display':''});
+    }
+
+
 </script>
 </body>
 </html>

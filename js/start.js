@@ -3,6 +3,10 @@ myChart1.title = '正负条形图';
 
 option1 = {
     backgroundColor: 'transparent',
+    title : {
+        text: '设备状态',
+        x:'center'
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -10,8 +14,9 @@ option1 = {
         }
     },
     legend: {
-        data:['参数一', '参数二', '参数三'],
-        top:'9%'
+        data:['暂停', '运行', '离线'],
+        top:'15%',
+
     },
     grid: {
         left: '3%',
@@ -21,19 +26,23 @@ option1 = {
     },
     xAxis : [
         {
-            type : 'value'
+            type : 'value',
         }
+
     ],
     yAxis : [
         {
             type : 'category',
             axisTick : {show: false},
-            data : ['周一','周二','周三','周四','周五','周六','周日']
+            data : ['周一','周二','周三','周四','周五','周六','周日'],
+
+
         }
     ],
+
     series : [
         {
-            name:'参数一',
+            name:'暂停',
             type:'bar',
             label: {
                 normal: {
@@ -44,7 +53,7 @@ option1 = {
             data:[200, 170, 240, 244, 200, 220, 210]
         },
         {
-            name:'参数二',
+            name:'运行',
             type:'bar',
             stack: '总量',
             label: {
@@ -55,7 +64,7 @@ option1 = {
             data:[320, 302, 341, 374, 390, 450, 420]
         },
         {
-            name:'参数三',
+            name:'离线',
             type:'bar',
             stack: '总量',
             label: {
@@ -74,28 +83,34 @@ myChart1.setOption(option1);
 var myChart2 = echarts.init(document.getElementById('main2'),'dark');
 option2 = {
     backgroundColor: 'transparent',
+    title : {
+        text: '故障设备预测',
+        x:'center'
+    },
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
+
     series : [
         {
-            name: '访问来源',
+            name: '故障预测',
             type: 'pie',
             radius : '60%',
-            center: ['50%', '50%'],
+            center: ['50%', '58%'],
             data:[
-                {value:335, name:'参数一'},
-                {value:310, name:'参数二'},
-                {value:234, name:'参数三'},
-                {value:135, name:'参数四'},
-                {value:1548, name:'参数五'}
+                {value:335, name:'6test'},
+                {value:310, name:'curtain_1'},
+                {value:234, name:'curtain_2'},
+                {value:135, name:'doorlock'},
+                {value:1548, name:'PM'}
             ],
+
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,
                     shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    shadowColor: 'rgba(0, 0, 0, 0.5)',
                 }
             }
         }
@@ -108,6 +123,10 @@ myChart3.title = '嵌套环形图';
 
 option3 = {
     backgroundColor: 'transparent',
+    title : {
+        text: '设备组展示',
+        x:'center'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -115,11 +134,11 @@ option3 = {
 
     series: [
         {
-            name:'访问来源',
+            name:'设备组',
             type:'pie',
             selectedMode: 'single',
             radius: [0, '40%'],
-
+            center: ['50%', '57%'],
             label: {
                 normal: {
                     position: 'inner'
@@ -131,24 +150,24 @@ option3 = {
                 }
             },
             data:[
-                {value:335, name:'总量', selected:true},
-                {value:679, name:'总量二'},
-                {value:1548, name:'总量三'}
+                {value:335, name:'test2', selected:true},
+                {value:679, name:'curtain'},
+                {value:1548, name:'asdf/asdf'}
             ]
         },
         {
-            name:'访问来源',
+            name:'具体设备',
             type:'pie',
             radius: ['55%', '70%'],
-
+            center: ['50%', '57%'],
             data:[
-                {value:335, name:'参数一'},
-                {value:310, name:'参数二'},
-                {value:234, name:'参数三'},
-                {value:135, name:'参数四'},
-                {value:1048, name:'参数五'},
-                {value:251, name:'参数六'},
-                {value:147, name:'参数七'},
+                {value:335, name:'6test'},
+                {value:310, name:'curtain_1'},
+                {value:234, name:'curtain_2'},
+                {value:135, name:'curtain_3'},
+                {value:1048, name:'test'},
+                {value:251, name:'test2'},
+                {value:147, name:'device'},
                 {value:102, name:'其他'}
             ]
         }
@@ -157,7 +176,7 @@ option3 = {
 myChart3.setOption(option3);
 
 var myChart4 = echarts.init(document.getElementById('main4'),'dark');
-var base = +new Date(1968, 9, 3);
+var base = +new Date(2017, 12, 3);
 var oneDay = 24 * 3600 * 1000;
 var date = [];
 
@@ -213,7 +232,7 @@ option4 = {
     }],
     series: [
         {
-            name:'模拟数据',
+            name:'压力传感',
             type:'line',
             smooth:true,
             symbol: 'none',
@@ -246,6 +265,10 @@ myChart5.title = '堆叠柱状图';
 
 option5 = {
     backgroundColor: 'transparent',
+    title : {
+        text: '创建设备数量',
+        x:'center'
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -730,12 +753,12 @@ option9 = {
     // },
     radar: {
         indicator: [
-            {name: '参数一', max: 300},
-            {name: '参数二', max: 250},
-            {name: '参数三', max: 300},
-            {name: '参数四', max: 5},
-            {name: '参数五', max: 200},
-            {name: '参数六', max: 100}
+            {name: '光照传感', max: 300},
+            {name: '温度传感', max: 250},
+            {name: '压力传感', max: 300},
+            {name: '温度传感', max: 5},
+            {name: '温度传感', max: 200},
+            {name: '速度传感', max: 100}
         ],
         shape: 'circle',
         splitNumber: 5,

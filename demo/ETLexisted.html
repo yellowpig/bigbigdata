@@ -12,8 +12,41 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>已存数据展示</legend>
+</fieldset>
+<blockquote class="layui-elem-quote layui-quote-nm">
+    <div class="site-demo-flow" id="LAY_demo3">
+        <ul>
+            <li style="display: inline-block">
+                <div>
+                    <img lay-src="../frame/layui/images/face/file.PNG" height="80" width="80" style="margin: 10px 35px">
+                </div>
+                <div style="color: #00C0F7;text-align: center">
+                    设备故障率统计分析表
+                </div>
+            </li>
+            <li style="display: inline-block">
+                <div>
+                    <img lay-src="../frame/layui/images/face/file.PNG" height="80" width="80" style="margin: 10px 35px">
+                </div>
+                <div style="color: #00C0F7;text-align: center">
+                    设备使用寿命统计分析
+                </div>
+            </li>
+        </ul>
+
+
+
+
+
+    </div>
+</blockquote>
 
 <!-- 工具集 -->
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>数据筛选</legend>
+</fieldset>
 <div class="my-btn-box">
     <span class="fl">
         <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
@@ -98,6 +131,17 @@
 
         // you code ...
 
+    });
+
+
+    layui.use('flow', function() {
+        var flow = layui.flow;
+
+        //按屏加载图片
+        flow.lazyimg({
+            elem: '#LAY_demo3 img'
+            , scrollElem: '#LAY_demo3' //一般不用设置，此处只是演示需要。
+        });
     });
 </script>
 <!-- 表格操作按钮集 -->
