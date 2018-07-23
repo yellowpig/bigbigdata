@@ -35,17 +35,19 @@
                 </div>
             </li>
         </ul>
-
-
-
-
-
     </div>
 </blockquote>
 
 <!-- 工具集 -->
 <fieldset class="layui-elem-field layui-field-title">
-    <legend>数据筛选</legend>
+    <legend>拖拽筛选</legend>
+</fieldset>
+<div class="layui-upload-drag" id="test10">
+    <i class="layui-icon"></i>
+    <p>点击将文件拖拽到此处筛选</p>
+</div>
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>表格结构</legend>
 </fieldset>
 <div class="my-btn-box">
     <span class="fl">
@@ -134,15 +136,24 @@
     });
 
 
-    layui.use('flow', function() {
-        var flow = layui.flow;
-
-        //按屏加载图片
-        flow.lazyimg({
-            elem: '#LAY_demo3 img'
-            , scrollElem: '#LAY_demo3' //一般不用设置，此处只是演示需要。
+    layui.use('upload', function(){
+        var $ = layui.jquery
+            ,upload = layui.upload;
+        //拖拽上传
+        upload.render({
+            elem: '#test10'
+            ,url: '/upload/'
+            ,done: function(res){
+                console.log(res)
+            }
         });
     });
+
+
+
+
+
+
 </script>
 <!-- 表格操作按钮集 -->
 <script type="text/html" id="barOption">
