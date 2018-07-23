@@ -15,54 +15,54 @@
           "href": "demo/ETLexisted.html"
         },{
           "text": "上传数据ETL",
-          "icon": "&#xe621;",
+          "icon": "&#xe62f;",
           "href": "demo/ETLupdate.html"
         }
       ]
     },
     {
       "text": "数据分析",
-      "icon": "&#xe628;",
+      "icon": "&#xe857;",
       "href": "",
       "subset": [
         {
           "text": "常规分析",
-          "icon": "&#xe621;",
+          "icon": "&#xe62c;",
           "href": "demo/dataanaylsis.html"
         },{
           "text": "SQL",
-          "icon": "&#xe621;",
+          "icon": "&#xe62d;",
           "href": "demo/dataSQL.html"
         }
       ]
     },
     {
       "text": "数据预测",
-      "icon": "&#xe628;",
+      "icon": "&#xe64c;",
       "href": "",
       "subset": [
         {
           "text": "数据预测",
-          "icon": "&#xe621;",
+          "icon": "&#xe636;",
           "href": "demo/dataforecast.html"
         },{
           "text": "模型管理",
-          "icon": "&#xe621;",
+          "icon": "&#xe631;",
           "href": "demo/modelforecast.html"
         }
       ]
     },{
       "text": "数据挖掘",
-      "icon": "&#xe628;",
+      "icon": "&#xe670;",
       "href": "",
       "subset": [
         {
           "text": "数据挖掘",
-          "icon": "&#xe621;",
+          "icon": "&#xe609;",
           "href": "demo/datamining.html"
         },{
           "text": "模型库管理",
-          "icon": "&#xe621;",
+          "icon": "&#xe631;",
           "href": "demo/modelmining.html"
         }
       ]
