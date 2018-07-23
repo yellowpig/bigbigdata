@@ -21,7 +21,7 @@
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
         <legend>SQL语句</legend>
     </fieldset>
-    <div style="overflow: hidden">
+    <form>
         <textarea name="SQLcode" required lay-verify="required" placeholder="请输入SQL语句..." class="layui-textarea" id="SQLcode">
             if exists (select * from sysdatabases where name='databaseName')
             drop database databaseName
@@ -45,12 +45,23 @@
             <button class="layui-btn layui-btn-warm">重置</button>
             <button class="layui-btn mgl-20">查询</button>
         </div>
-    </div>
+    </form>
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
         <legend>查询结果</legend>
     </fieldset>
     <div>
-        [ ]
+        <table class="layui-table" lay-skin="row">
+            <thead>
+            <tr><th>deviceCount</th><th>dataCount</th><th>usualDataCount</th><th>usualDataRate</th></tr></thead>
+            <tbody>
+            <tr><td>"pressure":10</td><td>"pressure":34</td><td>"pressure":34</td><td>"pressure":80%</td></tr>
+            <tr><td>"temperature":10</td><td>"temperature":41</td><td>"temperature":41</td><td>"temperature":100%</td></tr>
+            <tr><td>"humidity":10</td><td>"humidity":54</td><td>"humidity":54</td><td>"humidity":80%</td></tr>
+            <tr><td>"deformation":10</td><td>"deformation":48</td><td>"deformation":48</td><td>"deformation":100%</td></tr>
+            <tr><td>"velocity":10</td><td>"velocity":65</td><td>"velocity":65</td><td>"velocity":80%</td></tr>
+            <tr><td>"light":10</td><td>"light":72</td><td>"light":72</td><td>"light":100%</td></tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
