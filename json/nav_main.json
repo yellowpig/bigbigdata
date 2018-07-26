@@ -66,6 +66,17 @@
           "href": "demo/modelmining.html"
         }
       ]
+    },{
+      "text": "高级工具",
+      "icon": "&#xe631;",
+      "href": "",
+      "subset": [
+        {
+          "text": "线上开发",
+          "icon": "&#xe635;",
+          "href": "demo/onlinedev.html"
+        }
+      ]
     }
   ]
 }
