@@ -75,38 +75,38 @@
         <div class="layui-side-scroll">
             <!-- 左侧主菜单添加选项卡监听 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
-                <li class="layui-nav-item  layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;" href-url="demo/deviceinfo.html"><i class="layui-icon">&#xe620;</i>数据展示</a>
                 </li>
-                <li class="layui-nav-item  layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe628;</i>ETL</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="demo/ETLexisted.html"><i class="layui-icon">&#xe621;</i>已有数据ETL</a></dd>
                         <dd><a href="javascript:;" href-url="demo/ETLupdate.html"><i class="layui-icon">&#xe62f;</i>上传数据ETL</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe857;</i>数据分析</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="demo/dataanaylsis.html"><i class="layui-icon">&#xe62c;</i>常规分析</a></dd>
                         <dd><a href="javascript:;" href-url="demo/dataSQL.html"><i class="layui-icon">&#xe62d;</i>SQL</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe64c;</i>数据预测</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="demo/dataforecast.html"><i class="layui-icon">&#xe636;</i>数据预测</a></dd>
                         <dd><a href="javascript:;" href-url="demo/modelforecast.html"><i class="layui-icon">&#xe631;</i>模型管理</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe670;</i>数据挖掘</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="demo/datamining.html"><i class="layui-icon">&#xe609;</i>数据挖掘</a></dd>
                         <dd><a href="javascript:;" href-url="demo/modelmining.html"><i class="layui-icon">&#xe631;</i>模型库管理</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe631;</i>高级工具</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="demo/datamining.html"><i class="layui-icon">&#xe635;</i>线上开发</a></dd>
@@ -308,7 +308,7 @@ layui.use(['layer','vip_nav'], function () {
     // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
     vipNav.top_left('./json/nav_top_left.json','side-top-left',false);
     // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-    vipNav.main('./json/nav_main.json','side-main',true);
+    vipNav.main('./json/nav_main.json','side-main',false);
 
     // you code ...
 

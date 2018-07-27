@@ -30,7 +30,7 @@
 </div>
 
 <!-- 表格 -->
-<div id="dateTable"></div>
+<table id="dateTable" lay-filter="dataCheck"></table>
 
 <!-- 实例详情 -->
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
@@ -45,11 +45,7 @@
     </ul>
     <div class="layui-tab-content" style="height: 100px;">
         <div class="layui-tab-item layui-show">
-            <ul style="line-height: 2rem;">
-                <li>实例名称：app_3</li>
-                <li>实例ID：3</li>
-                <li>模型名称：test_4</li>
-                <li>模型ID：4</li>
+            <ul style="line-height: 2rem;" id="showItem">
             </ul>
         </div>
         <div class="layui-tab-item">
@@ -69,7 +65,7 @@
             <div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
                 <input type="text" class="layui-input" id="run_timeout">
             </div>
-            <a class="layui-btn btn-add btn-default" id="startapp">启动</a>
+            <a class="layui-btn btn-add btn-default" id="startapp" onclick="layer.msg('模型已启动...');">启动</a>
         </div>
         <div class="layui-tab-item">预测结果：2018年7月30日约有51.33%的概论会下雨</div>
     </div>
@@ -103,7 +99,7 @@
                 , {field: 'stop_time', title: '上次停止运行时间', width: 300}
                 , {fixed: 'right', title: '操作', width: 400, align: 'center', toolbar: '#barOption'} //这里的toolbar值是模板元素的选择器
             ]]
-            , id: 'dataCheck'
+            //, id: 'dataCheck'
             //, url: './../json/data_table.json'
             ,data:[{"name":"app_3","id":3,"model":"test1","stop_time":20180721},{"name":"app_4","id":4,"model":"test2","stop_time":20180720}]
             , method: 'get'
@@ -126,10 +122,25 @@
 
         // 获取选中行
         table.on('checkbox(dataCheck)', function (obj) {
-            layer.msg('123');
+            layer.msg('已选中该行');
             console.log(obj.checked); //当前是否选中状态
             console.log(obj.data); //选中行的相关数据
             console.log(obj.type); //如果触发的是全选，则为：all，如果触发的是单选，则为：one
+        });
+
+        //toolbar事件监听
+        table.on('tool(dataCheck)',function(obj){
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+            if(layEvent === 'detail'){ //查看
+                var innerhtml='<li>实例名称：'+data.name+'</li><li>实例ID：'+data.id+'</li><li>模型名称：'+data.model+'</li>'
+
+                console.log(data)
+                $('#showItem').empty()
+                $('#showItem').append(innerhtml)
+            }
         });
 
         // 刷新

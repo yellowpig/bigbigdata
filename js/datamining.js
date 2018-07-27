@@ -1,5 +1,6 @@
 function addmodel() {
-    var content='请选择绑定参数tem的设备：<select><option>1</option><option>2</option></select><br/>' +
+    var content='请选择绑定的模型：<select><option>test1</option><option>test2</option></select><br/>' +
+        '请选择绑定参数tem的设备：<select><option>1</option><option>2</option></select><br/>' +
         '请选择绑定参数hum的设备：<select><option>1</option><option>2</option></select>'
     var index=layer.open({
         title: '添加实例'
